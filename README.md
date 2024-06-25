@@ -50,6 +50,11 @@ This script initializes the humanoid stick figure and performs the animation, va
 ### Usage
 You can modify the joint angles and the animation sequence by editing the humanoid.m file. The script includes comments and documentation to guide you through the customization process.
 
+### Animation video
+
+https://github.com/Ash173/humanoid_matlab_animation/assets/110592725/9e953afe-d3c4-4c29-87d2-4b87af4e0908
+
+
 
 
 

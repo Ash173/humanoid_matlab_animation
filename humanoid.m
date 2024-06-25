@@ -2,7 +2,7 @@
 close 'all'
 clear
 
-%% Initialising all points
+% Initialising all points
 N = [0 0 0];
 S1 = [N(1)+0.4 N(2) N(3)];
 S2 = [N(1)-0.4 N(2) N(3)];
@@ -18,7 +18,7 @@ K2 = [T2(1) T2(2) T2(3)-0.6];
 L1 = [K1(1) K1(2) K1(3)-0.6];
 L2 = [K2(1) K2(2) K2(3)-0.6];
 
-%% Elbow 1
+% Elbow 1
 initial_position(1);
 for th=0:1:90
     if th <= 45
@@ -34,7 +34,8 @@ for th=0:1:90
     delete(line);
 end
 cla;
-%% Elbow 2
+
+% Elbow 2
 initial_position(2);
 for th=0:1:90
     if th <= 45
@@ -50,7 +51,8 @@ for th=0:1:90
     delete(line);
 end
 cla;
-%% Knee 1
+
+% Knee 1
 initial_position(3);
 for th=0:1:90
     if th <= 45
@@ -66,7 +68,8 @@ for th=0:1:90
     delete(line);
 end
 cla;
-%% Knee 2
+
+% Knee 2
 initial_position(4);
 for th=0:1:90
     if th <= 45
@@ -82,7 +85,8 @@ for th=0:1:90
     delete(line);
 end
 cla;
-%% Shoulder 1 along x
+
+% Shoulder 1 along x
 initial_position(5);
 for th=0:1:90   
     if th <= 45
@@ -101,7 +105,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Shoulder 1 along y
+
+% Shoulder 1 along y
 initial_position(5);
 for th=0:1:90
     if th <= 45
@@ -120,7 +125,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Shoulder 1 along z
+
+% Shoulder 1 along z
 initial_position(5);
 for th=0:1:90
     angle = th;
@@ -165,7 +171,8 @@ for th=90:-1:0
     delete(line1); delete(line2);
 end
 cla;
-%% Shoulder 2 along x
+
+% Shoulder 2 along x
 initial_position(6);
 for th=0:1:90   
     if th <= 45
@@ -184,7 +191,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Shoulder 2 along y
+
+% Shoulder 2 along y
 initial_position(6);
 for th=0:1:90
     if th <= 45
@@ -203,7 +211,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Shoulder 2 along z
+
+% Shoulder 2 along z
 initial_position(6);
 for th=0:1:90
     angle = th;
@@ -248,7 +257,8 @@ for th=90:-1:0
     delete(line1); delete(line2);
 end
 cla;
-%% Hip 1 along x
+
+% Hip 1 along x
 initial_position(7);
 for th=0:1:90
     if th <= 45
@@ -267,7 +277,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Hip 1 along y
+
+% Hip 1 along y
 initial_position(7);
 for th=0:1:90
     if th <= 45
@@ -286,7 +297,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Hip 1 along z
+
+% Hip 1 along z
 initial_position(7);
 for th=0:1:90
     angle = th;
@@ -331,7 +343,8 @@ for th=90:-1:0
     delete(line1); delete(line2);
 end
 cla;
-%% Hip 2 along x
+
+% Hip 2 along x
 initial_position(8);
 for th=0:1:90
     if th <= 45
@@ -350,7 +363,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Hip 2 along y
+
+% Hip 2 along y
 initial_position(8);
 for th=0:1:90
     if th <= 45
@@ -369,7 +383,8 @@ for th=0:1:90
     delete(line1); delete(line2);
 end
 cla;
-%% Hip 2 along z
+
+% Hip 2 along z
 initial_position(8);
 for th=0:1:90
     angle = th;
@@ -414,7 +429,8 @@ for th=90:-1:0
     delete(line1); delete(line2);
 end
 cla;
-%% Central torso along x
+
+% Central torso along x
 initial_position(9);
 for th=0:1:90        
     if th <= 45
@@ -449,7 +465,7 @@ for th=0:1:90
     delete(line1); delete(line2); delete(line3); delete(line4); delete(p1);
 end
 
-%% Central Torso along y
+% Central Torso along y
 initial_position(9);
 for th=0:1:90
     if th <= 45
@@ -482,7 +498,7 @@ for th=0:1:90
     delete(line1); delete(line2); delete(line3); delete(line4); delete(p1);
 end
 
-%% Cental Torso along z
+% Cental Torso along z
 initial_position(9);
 for th=0:1:90
     if th <= 45
@@ -515,7 +531,8 @@ for th=0:1:90
     delete(line1); delete(line2); delete(line3); delete(line4); delete(p1);
 end
 initial_position(0);
-%% Rotation matrices
+
+% Rotation matrices
 
 function Rx = rotationx(theta)
     theta = deg2rad(theta);
@@ -532,7 +549,7 @@ function Rz = rotationz(theta)
     Rz = [cos(theta) -sin(theta) 0;sin(theta) cos(theta) 0;0 0 1];
 end
 
-%% Initial positions
+% Initial positions
 function I = initial_position(num)
 
 N = [0 0 0];

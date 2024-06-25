@@ -1,4 +1,4 @@
-% Computer Graphics Assignment 2 Q2 by Ashwin R Nair (122101004)
+% Humanoid simulation in MATLAB by Ashwin R Nair
 close 'all'
 clear
 
